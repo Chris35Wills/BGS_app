@@ -24,6 +24,7 @@ credits.addAttribution("© <a href='https://www.mapbox.com/map-feedback/'>Mapbox
 //MEASUREMENT DATA
 omnivore.csv('measurement_WGS84.csv')
     .on('ready', function(layer) {
+        alert("Should be plotting markers...")
          this.eachLayer(function(marker) {
             marker.setIcon(L.mapbox.marker.icon({
                     'marker-color': '#1b9e77' //green
