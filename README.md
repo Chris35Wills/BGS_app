@@ -20,6 +20,7 @@ There is also an *ad hoc* (Python) data preprocessing script available [here](ht
 
 ## Attribution
 
-Contains British Geological Survey materials © NERC 2016
+Contains [British Geological Survey](http://www.bgs.ac.uk/) materials © NERC 2016
+
 © <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>
 
