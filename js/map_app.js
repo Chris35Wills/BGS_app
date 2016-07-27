@@ -22,7 +22,7 @@ credits.addAttribution("© <a href='https://www.mapbox.com/map-feedback/'>Mapbox
 // ADD DATA AND MARKERS
 
 //MEASUREMENT DATA
-omnivore.csv('../data/measurement_WGS84.csv')
+omnivore.csv('data/measurement_WGS84.csv')
     .on('ready', function(layer) {
          this.eachLayer(function(marker) {
             marker.setIcon(L.mapbox.marker.icon({
@@ -37,7 +37,7 @@ omnivore.csv('../data/measurement_WGS84.csv')
     .addTo(map);
 
 // FOSSIL DATA
-omnivore.csv('../data/fossil_WGS84.csv')
+omnivore.csv('data/fossil_WGS84.csv')
     .on('ready', function(layer) {
         this.eachLayer(function(marker) {
             marker.setIcon(L.mapbox.marker.icon({
@@ -47,14 +47,14 @@ omnivore.csv('../data/fossil_WGS84.csv')
                 'Species: ' + marker.toGeoJSON().properties.Species + '<br>' +
                 'Date: ' + marker.toGeoJSON().properties.Date + '<br>' +
                 'Time: ' + marker.toGeoJSON().properties.Time + '<br>' +
-                '<img src="../img/' + marker.toGeoJSON().properties.Image + '" /><br>' +
+                '<img src="img/' + marker.toGeoJSON().properties.Image + '" /><br>' +
                 marker.getLatLng());
         });
     })
     .addTo(map);
     
 // BOREHOLE DATA
-omnivore.csv('../data/borehole_WGS84.csv')
+omnivore.csv('data/borehole_WGS84.csv')
     .on('ready', function(layer) {
         this.eachLayer(function(marker) {
             marker.setIcon(L.mapbox.marker.icon({
@@ -70,7 +70,7 @@ omnivore.csv('../data/borehole_WGS84.csv')
     .addTo(map);
 
 // ROCK DATA
-omnivore.csv('../data/rock_WGS84.csv')
+omnivore.csv('data/rock_WGS84.csv')
     .on('ready', function(layer) {
         this.eachLayer(function(marker) {
             marker.setIcon(L.mapbox.marker.icon({
@@ -81,7 +81,7 @@ omnivore.csv('../data/rock_WGS84.csv')
                 'Rock type: ' + marker.toGeoJSON().properties.Rock_name + '<br>' +
                 'Date: ' + marker.toGeoJSON().properties.Date + '<br>' +
                 'Time: ' + marker.toGeoJSON().properties.Time + '<br>' +
-                '<img src="../img/' + marker.toGeoJSON().properties.Image + '" /><br>' +
+                '<img src="img/' + marker.toGeoJSON().properties.Image + '" /><br>' +
                 marker.getLatLng());
         });
     })
@@ -106,7 +106,7 @@ function getColor(d) {
 
 legend.onAdd = function (map) {
 
-    alert("Paths changed again");
+    alert("Paths changed back - have to be in same dir as js call");
     var div = L.DomUtil.create('div', 'info legend'),
         marker = ['Fossil', 'Rock', 'Measurement', 'Borehole'];
         
