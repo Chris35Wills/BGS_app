@@ -16,7 +16,7 @@ overviewMap.addTo(map);
 
 // add map credits and include link to app source code (the github repo)
 var credits = L.control.attribution().addTo(map);
-credits.addAttribution("© <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <br> <a href='https://github.com/Chris35Wills/jscript_testSite'><b>App Source Code</b></a>");
+credits.addAttribution("© <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <br> <a href='https://github.com/Chris35Wills/BGS_app'><b>App Source Code</b></a>");
 
 ///////////////////////
 // ADD DATA AND MARKERS
