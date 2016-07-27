@@ -18,7 +18,7 @@ Please log any issues or ideas for further development [here](https://github.com
 
 There is also a Python data preprocessing script available [here](https://github.com/Chris35Wills/BGS_app/blob/gh-pages/misc/preprocessing.py). This has been used to standardise all data prior to it being presented - see the file header for more info. 
 
-# Attribution
+## Attribution
 
 Contains British Geological Survey materials © NERC 2016
 © <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>
