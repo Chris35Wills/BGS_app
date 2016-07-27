@@ -194,7 +194,7 @@ map.on('baselayerchange', function (eventLayer) {
       
    if (eventLayer.name === 'Soil grain size') {
         
-        alert("You may need to zoom to see this layer <br> Scale bar should be less than 1000 m");
+        alert("You may need to zoom to see this layer\nScale bar should be less than 1000 m");
 
         // check if legend of other baselayer is active - remove if it is
         if ( soilGroupLegndDef === 'on' ) {
@@ -210,7 +210,7 @@ map.on('baselayerchange', function (eventLayer) {
     
     } else if (eventLayer.name === 'Soil group') {
 
-        alert("You may need to zoom to see this layer <br> Scale bar should be less than 1000 m");
+        alert("You may need to zoom to see this layer\nScale bar should be less than 1000 m");
         
         // check if legend of other baselayer is active - remove if it is
         if ( soilGrainLegndDef === 'on' ) {
