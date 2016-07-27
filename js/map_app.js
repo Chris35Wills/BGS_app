@@ -106,7 +106,6 @@ function getColor(d) {
 
 legend.onAdd = function (map) {
 
-    alert("Paths changed back - have to be in same dir as js call");
     var div = L.DomUtil.create('div', 'info legend'),
         marker = ['Fossil', 'Rock', 'Measurement', 'Borehole'];
         
