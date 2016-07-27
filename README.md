@@ -10,5 +10,7 @@ The complete source code can be accessed by following the App Source Code hyperl
 
 Please log any issues here in the Github repo.
 
+There is also a data preprocessing script available [here](https://github.com/Chris35Wills/BGS_app/blob/gh-pages/misc/preprocessing.py). This has been used to standardise all data prior to it being presented. 
+
 © <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>
 
