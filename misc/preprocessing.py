@@ -19,10 +19,8 @@ bore = pd.read_csv("../data/original_data/borehole.txt", sep='	')
 foss = pd.read_csv("../data/original_data/fossil.txt", sep='	')
 rock = pd.read_csv("../data/original_data/rock.txt", sep='	')
 
-#coordinate transformation - utm to latlon
+#coordinate transformation - BNG to latlon
 print("Converting to lat/lon...")
-wgs84=pyproj.Proj("+init=EPSG:4326") # LatLon with WGS84 datum
-utm30N=pyproj.Proj("+init=EPSG:32630") 
 bng=pyproj.Proj("+init=EPSG:27700")
 lon_bore, lat_bore = bng(bore['X'].values, bore['Y'].values, inverse=True)
 lon_rock, lat_rock = bng(rock['X'].values, rock['Y'].values, inverse=True)
