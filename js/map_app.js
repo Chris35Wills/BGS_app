@@ -8,11 +8,12 @@
 // On the addition of a new map, its legend will appear on screen
 // There is also some user functionality to return the lat/lon position of the cursor upon a click event
 
-// declare personal mapbox access token to access the mapbox API
+///////////////////////////////////////////////////////
+// DECLARE MAPBOX ACCESS TOKEN TO ACCESS THE MAPBOX API
 L.mapbox.accessToken = 'pk.eyJ1IjoiY2hyaXN3aWxscyIsImEiOiJjaXFyeTdhNmgwMDl3aTRubTc2aXZueXhsIn0.ULMwLML50j_FGwrRAWNpEw';
 
-///////////////////////////////////////////////////
-// CREATE MAP AND INCLUDE GEOCODE SEARCH CAPABILITY
+///////////////////////////////////////////
+// CREATE MAP AND INCLUDE SEARCH CAPABILITY
 
 var map = L.mapbox.map('map')
     //.setView([52.871169, -1.090739], 15) // Keyworth, UK
@@ -24,7 +25,6 @@ var overviewMap = L.tileLayer('https://api.mapbox.com/styles/v1/chriswills/cir23
     isBaseLayer: true
 });
 overviewMap.addTo(map);
-//L.tileLayer('https://api.mapbox.com/styles/v1/chriswills/cir23gikh000ljcnn13ee2y6g/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hyaXN3aWxscyIsImEiOiJjaXFyeTdhNmgwMDl3aTRubTc2aXZueXhsIn0.ULMwLML50j_FGwrRAWNpEw',{isBaseLayer: true}).addTo(map)
 
 // add map credits and include link to app source code (the github repo)
 var credits = L.control.attribution().addTo(map);
@@ -33,7 +33,7 @@ credits.addAttribution("© <a href='https://www.mapbox.com/map-feedback/'>Mapbox
 ///////////////////////
 // ADD DATA AND MARKERS
 
-//MEASUREMENT DATA
+// MEASUREMENT DATA
 omnivore.csv('data/measurement_WGS84.csv')
     .on('ready', function(layer) {
         this.eachLayer(function(marker) {
@@ -139,7 +139,8 @@ legend.onAdd = function(map) {
 legend.addTo(map);
 
 ////////////////////////////
-// ADD ADDITIONAL MAP LAYERS
+// ADD ADDITIONAL MAP LAYERS 
+// uses WMS layers from BGS: http://bgs.ac.uk/data/services/soilwms.html
 
 var labelMap = L.tileLayer('https://api.mapbox.com/styles/v1/chriswills/cir236fq90023cmm9hoqif5w0/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hyaXN3aWxscyIsImEiOiJjaXFyeTdhNmgwMDl3aTRubTc2aXZueXhsIn0.ULMwLML50j_FGwrRAWNpEw', {
     isBaseLayer: false
@@ -172,7 +173,6 @@ var overlay = {
 
 L.control.layers(basemaps, overlay).addTo(map);
 
-
 ///////////////////////////////////////
 // CREATE LEGENDS FOR ADDITIONAL LAYERS
 
@@ -203,7 +203,7 @@ soilGroupLegend.onAdd = function(map) {
 };
 //soilGroupLegend.addTo(map);
 
-////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 // TURN ADDITIONAL LAYER LEGENDS ON/OFF BASED ON USER EVENTS
 
 //set global variables to assist in turning legends on and off
@@ -261,13 +261,13 @@ map.on('baselayerchange', function(eventLayer) {
     }
 });
 
-
 ////////////////////
 // ADD MAP SCALE BAR
 L.control.scale().addTo(map);
 
-////////////////////
-// click event
+////////////////////////////////
+// CLICK EVENT TO RETUN LOCATION
+
 map.on('click', function(e) {
     alert(e.latlng);
 });
