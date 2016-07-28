@@ -1,3 +1,13 @@
+<!-- hide script from old browsers
+
+// Implements leaflet and the mapbox plugin to display data and images (see /csv and /img) as markers on a map - markers have 
+// their own legend
+// The basemap is taken from mapbox
+// The map is fully searchable using the mapbox geocoderControl
+// Additional maps can be turned on/off by the user - these maps are provided courtesy of the British Geological Survey through WMS
+// On the addition of a new map, its legend will appear on screen
+// There is also some user functionality to return the lat/lon position of the cursor upon a click event
+
 // declare personal mapbox access token to access the mapbox API
 L.mapbox.accessToken = 'pk.eyJ1IjoiY2hyaXN3aWxscyIsImEiOiJjaXFyeTdhNmgwMDl3aTRubTc2aXZueXhsIn0.ULMwLML50j_FGwrRAWNpEw';
 
@@ -261,3 +271,5 @@ L.control.scale().addTo(map);
 map.on('click', function(e) {
     alert(e.latlng);
 });
+
+// end hiding script from old browsers -->
